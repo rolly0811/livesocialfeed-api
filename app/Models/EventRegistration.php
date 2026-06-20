@@ -21,7 +21,10 @@ class EventRegistration extends Model
         'agreed_policy',
         'registration_code',
         'live_id',
-        'attended_at'
+        'attended_at',
+        'target_date',
+        'start_date',
+        'end_date',
     ];
 
     protected $casts = [

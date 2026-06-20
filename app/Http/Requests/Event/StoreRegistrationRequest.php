@@ -38,7 +38,8 @@ class StoreRegistrationRequest extends FormRequest
                 'city' => 'required|string|max:255',
                 'category' => 'required|min:1',
                 'biggest_challenge' => 'required',
-                'style' => 'required'
+                'style' => 'required',
+                'date' => 'required|numeric'
             ];
         }
     }
@@ -51,8 +52,6 @@ class StoreRegistrationRequest extends FormRequest
             'city' => 'required|string|max:255',
             'category' => 'required|min:1',
             'biggest_challenge' => 'required',
-            'style' => 'required',
-            'event.date' => 'required|date',
             'event.budget' => 'required',
             'event.guests' => 'required|numeric',
             'event.type' => 'required',
@@ -68,7 +67,6 @@ class StoreRegistrationRequest extends FormRequest
             'city' => 'required|string|max:255',
             'category' => 'required|min:1',
             'biggest_challenge' => 'required',
-            'style' => 'required',
             'event.country' => 'required|string|max:255',
             'event.budget' => 'required',
             'event.type' => 'required',
@@ -84,7 +82,6 @@ class StoreRegistrationRequest extends FormRequest
             'city' => 'required|string|max:255',
             'category' => 'required|min:1',
             'biggest_challenge' => 'required',
-            'style' => 'required',
             'event.budget' => 'required',
             'event.type' => 'required',
             'event.needs' => 'required|array|min:1'

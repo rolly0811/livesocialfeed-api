@@ -14,9 +14,9 @@ class CreateColumnsEventCategoriesTable extends Migration
     public function up()
     {
         Schema::table('event_categories', function (Blueprint $table) {
-            $table->string('name')->after('id');
-            $table->string('type')->after('name');
-            $table->string('icon')->after('type');
+            $table->string('name')->after('id')->nullable();
+            $table->string('type')->after('name')->nullable();
+            $table->string('icon')->after('type')->nullable();
         });
     }
 

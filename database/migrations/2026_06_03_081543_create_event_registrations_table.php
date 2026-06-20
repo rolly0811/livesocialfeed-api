@@ -27,6 +27,9 @@ class CreateEventRegistrationsTable extends Migration
             $table->boolean('agreed_policy')->default(false);
             $table->string('registration_code', 100)->unique();
             $table->string('live_id', 20)->nullable();
+            $table->string('target_date')->nullable();
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->dateTime('attended_at')->nullable();
             $table->timestamps();
         });

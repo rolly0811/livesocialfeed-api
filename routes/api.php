@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\PostController as AdminPostController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
@@ -56,6 +57,11 @@ Route::middleware('auth:sanctum')->group( function () {
     Route::get('/subscriptions/{id}/frames', [SubscriptionController::class, 'getFrames']);
     Route::post('/subscriptions/{id}/frames', [SubscriptionController::class, 'uploadFrame']);
     Route::delete('/subscriptions/{subscription_id}/frames/{id}', [SubscriptionController::class, 'deleteFrame']);
+
+    Route::get('/events', [EventController::class, 'get']);
+    Route::post('/events', [EventController::class, 'store']);
+    Route::put('/events/{event}', [EventController::class, 'update']);
+    Route::delete('/events/{event}', [EventController::class, 'destroy']);
 });
 
 Route::post('/event-registration', [EventRegistrationController::class, 'register']);
